@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TTS BOT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+112c972eb43be7c7b9cfe5491bd59dce554dc25c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TTS BOT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TTS BOT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
