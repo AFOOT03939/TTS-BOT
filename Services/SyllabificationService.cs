@@ -128,19 +128,32 @@ namespace TTS_BOT.Services
                 //consonantes entre vocales bim-bo donde i-m-b-o
                 if ((i + 1 < text.Length) && consonants.Contains(text[i]) && consonants.Contains(text[i + 1]) && !consonantClusters.Contains($"{text[i]}{text[i + 1]}"))
                 {
-                    if (vocals.Contains(text[i - 1]) && vocals.Contains(text[i + 2]))
+                    //introduce la regla de la doble l inicial "ll"
+                    if((i < 2) && (text[i] == 'l' && text[i + 1] == 'l'))
                     {
-                        if (text[i] == 'r' && text[i + 1] == 'r')
+                        syllablePositionsConsonants.Add(i + 2);
+                    }
+                    else
+                    {
+                        if (vocals.Contains(text[i - 1]) && vocals.Contains(text[i + 2]))
                         {
-                            syllablePositionsConsonants.Add(i - 1);
+                            if (text[i] == 'r' && text[i + 1] == 'r')
+                            {
+                                syllablePositionsConsonants.Add(i - 1);
 
-                        } else if(text[i] == 's' && text[i + 1] == 'h')
-                        {
-                            syllablePositionsConsonants.Add(i + 1);
-                        }
-                        else
-                        {
-                            syllablePositionsConsonants.Add(i);
+                            }
+                            else if (text[i] == 's' && text[i + 1] == 'h')
+                            {
+                                syllablePositionsConsonants.Add(i + 1);
+                            }
+                            else if (text[i] == 'l' && text[i + 1] == 'l')
+                            {
+                                syllablePositionsConsonants.Add(i - 1);
+                            }
+                            else
+                            {
+                                syllablePositionsConsonants.Add(i);
+                            }
                         }
                     }
                 }
