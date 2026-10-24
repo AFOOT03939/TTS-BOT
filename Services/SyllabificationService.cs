@@ -79,128 +79,70 @@ namespace TTS_BOT.Services
         public string syllabificate(string text)
         {
             string syllables = "";
-            string currentWord = "";
-            string currentVocalWord = "";
-            string currentConsonantWord = "";
 
-            List<int> syllablePositionsConsonants = new List<int>();
-            List<int> syllablePositionsVocals = new List<int>();
-            List<int> syllablePositionsDiphthongs = new List<int>();
-            List<int> syllablePositionsHiatus = new List<int>();
-            List<int> syllablePositionsConsonantsClusters = new List<int>();
+            List<int> syllablePositions = new List<int>();
 
-            //este for recorre todo el string de la palabra sabiendo que text[i] es un character
             for (int i = 0; i < text.Length; i++)
             {
-                currentWord += text[i];
-
+                //identifica el tipo de hiato y agrega el separador
                 if ((i + 1 < text.Length) && (strongStrongHiatus.Contains($"{text[i]}{text[i + 1]}") || weakStrongHiatus.Contains($"{text[i]}{text[i + 1]}") || strongWeakHiatus.Contains($"{text[i]}{text[i + 1]}") || weakWeakHiatus.Contains($"{text[i]}{text[i + 1]}")))
                 {
-                    syllablePositionsHiatus.Add(i);
-                    syllablePositionsHiatus.Add(i + 1);
+                    syllablePositions.Add(i);
+                    syllablePositions.Add(i + 1);
                 }
 
-                //agrega el diptongo al principio de la palabra: eu-ro-pa donde eu es el diptongo
-                if ((i < 2) && (weakStrongDiphthongs.Contains($"{text[i]}{text[i + 1]}") || strongWeakDiphthongs.Contains($"{text[i]}{text[i + 1]}") || weakWeakDiphthongs.Contains($"{text[i]}{text[i + 1]}")))
+                //identifica el tipo de diptongo y agrega el separador
+                if ((i + 1 < text.Length) && (weakStrongDiphthongs.Contains($"{text[i]}{text[i + 1]}") || strongWeakDiphthongs.Contains($"{text[i]}{text[i + 1]}") || weakWeakDiphthongs.Contains($"{text[i]}{text[i + 1]}")))
                 {
-                    syllablePositionsDiphthongs.Add(i + 1);
+                    if (!consonants.Contains(text[text.Length - 1]) && !(i == text.Length - 1))
+                    {
+                        syllablePositions.Add(i + 1);
+
+                    }
                 }
 
-                //esta condición evalúa cuando la vocal empieza sola luego de dos consonantes específicas
-                //el ejemplo sería a-bra-zar
-                if ((i + 2 < text.Length) && consonantClusters.Contains($"{text[i]}{text[i + 1]}"))
+                //identifica todas las combinaciones silábicas en la separación de consonante-vocal
+
+                //primero identifica una vocal
+                if (vocals.Contains(text[i]))
                 {
-                    syllablePositionsConsonantsClusters.Add(i - 1);
-
-                    //comprobación de diptongos
-                    if ((i + 3 < text.Length) && (weakStrongDiphthongs.Contains($"{text[i + 2]}{text[i + 3]}") || strongWeakDiphthongs.Contains($"{text[i + 2]}{text[i + 3]}") || weakWeakDiphthongs.Contains($"{text[i + 2]}{text[i + 3]}")))
+                    //recorre la palabra a partir de la siguiente letra
+                    for (int j = i + 1; j < text.Length; j++)
                     {
-                        syllablePositionsDiphthongs.Add(i + 3);
-                    }
-                    else
-                    {
-                        syllablePositionsConsonantsClusters.Add(i + 2);
-                    }
-
-                    //syllablePositionsConsonants.Add(i+3);
-                }
-
-                //consonantes entre vocales bim-bo donde i-m-b-o
-                if ((i + 1 < text.Length) && consonants.Contains(text[i]) && consonants.Contains(text[i + 1]) && !consonantClusters.Contains($"{text[i]}{text[i + 1]}"))
-                {
-                    //introduce la regla de la doble l inicial "ll"
-                    if((i < 2) && (text[i] == 'l' && text[i + 1] == 'l'))
-                    {
-                        syllablePositionsConsonants.Add(i + 2);
-                    }
-                    else
-                    {
-                        if (vocals.Contains(text[i - 1]) && vocals.Contains(text[i + 2]))
+                        //encuentra la siguiente vocal para crear un rango que abarca todas las consonantes de en medio
+                        if (vocals.Contains(text[j]))
                         {
-                            if (text[i] == 'r' && text[i + 1] == 'r')
+                            //una sílaba puede empezar de 2 maneras, con una consonante o en un grupo de 2 consonantes
+                            //estos grupos ya están predeterminados, son una regla y están arriiba en el código
+                            //por ejemplo: trans-por donde po es la separación consonante-vocal
+                            //o por ejemplo: a-tra donde tr es el grupo de 2 consonantes que pueden empezar una sílaba
+                            if ((j + 2 < text.Length) && (consonantClusters.Contains($"{text[j - 2]}{text[j - 1]}")))
                             {
-                                syllablePositionsConsonants.Add(i - 1);
+                                syllablePositions.Add(j - 3);
+                            }
+                            else if (consonants.Contains(text[j - 1]))
+                            {
 
-                            }
-                            else if (text[i] == 's' && text[i + 1] == 'h')
-                            {
-                                syllablePositionsConsonants.Add(i + 1);
-                            }
-                            else if (text[i] == 'l' && text[i + 1] == 'l')
-                            {
-                                syllablePositionsConsonants.Add(i - 1);
-                            }
-                            else
-                            {
-                                syllablePositionsConsonants.Add(i);
+                                if (text[j - 1] == 'r' && text[j - 2] == 'r')
+                                {
+                                    syllablePositions.Add(j - 3);
+
+                                }
+                                else if (text[j - 1] == 'h' && text[j - 2] == 's')
+                                {
+                                    syllablePositions.Add(j - 3);
+                                }
+                                else if (text[j - 1] == 'l' && text[j - 2] == 'l')
+                                {
+                                    syllablePositions.Add(j - 3);
+                                }
+                                else
+                                {
+                                    syllablePositions.Add(j - 2);
+                                }
                             }
                         }
                     }
-                }
-
-                //vocales entre consonantes ca - sa
-                //if (consonants.Contains(text[i - 1]) && vocals.Contains(text[i]))
-                if ((i + 2 < text.Length) && (vocals.Contains(text[i]) && consonants.Contains(text[i + 1]) && vocals.Contains(text[i + 2])))
-                {
-                    //comprobación de diptongos
-                    if ((i + 1 < text.Length) && (weakStrongDiphthongs.Contains($"{text[i]}{text[i + 1]}") || strongWeakDiphthongs.Contains($"{text[i]}{text[i + 1]}") || weakWeakDiphthongs.Contains($"{text[i]}{text[i + 1]}")))
-                    {
-                        syllablePositionsDiphthongs.Add(i + 1);
-                    }
-                    else
-                    {
-                        syllablePositionsVocals.Add(i);
-                    }
-
-                    //esto es un rollback por si encuentra un consonantCluster
-                    //ejemplo: plato, donde "la" pasaría la regla, pero "pla" es la regla real
-                    if ((i >= 2) && consonantClusters.Contains($"{text[i - 2]}{text[i - 1]}"))
-                    {
-                        syllablePositionsVocals.RemoveAt(syllablePositionsVocals.Count - 1);
-                    }
-                }
-
-                //esto aplica para si la ultima letra de la palabra es consonante
-                //se mete esa consonante a la ultima sílaba
-                if (consonants.Contains(text[text.Length - 1]) && (i == text.Length - 1))
-                {
-                    if (syllablePositionsVocals.Count != 0)
-                    {
-                        syllablePositionsVocals.RemoveAt(syllablePositionsVocals.Count - 1);
-                        syllablePositionsVocals.Add(i - 3);
-                    }
-
-                    if (syllablePositionsDiphthongs.Count != 0)
-                    {
-                        syllablePositionsDiphthongs.RemoveAt(syllablePositionsDiphthongs.Count - 1);
-                        syllablePositionsDiphthongs.Add(i - 4);
-                    }
-
-                    if (syllablePositionsHiatus.Count != 0)
-                    {
-                        syllablePositionsHiatus.RemoveAt(syllablePositionsHiatus.Count - 1);
-                    }
-                    
                 }
             }
 
@@ -208,51 +150,14 @@ namespace TTS_BOT.Services
             {
                 syllables += text[i];
 
-                if (syllablePositionsHiatus.Contains(i))
-                {
-                    syllables += "[s]";
-                }
-
-                if (syllablePositionsDiphthongs.Contains(i))
-                {
-                    syllables += "[s]";
-                }
-
-                if (syllablePositionsConsonantsClusters.Contains(i))
-                {
-                    syllables += "[s]";
-                }
-
-                if (syllablePositionsConsonants.Contains(i))
-                {
-                    syllables += "[s]";
-                }
-
-                if (syllablePositionsVocals.Contains(i))
+                if (syllablePositions.Contains(i))
                 {
                     syllables += "[s]";
                 }
 
             }
 
-            string correctedSeparatedSyllables = removeExtraSeparator(syllables);
-
-            return correctedSeparatedSyllables;
-        }
-
-        public string removeExtraSeparator(string text)
-        {
-            string separator = "[s]";
-
-            for (int i = 0; i <= text.Length; i++)
-            {
-                if ((i + 5 < text.Length) && (separator.Contains($"{text[i]}{text[i + 1]}{text[i + 2]}") && separator.Contains($"{text[i + 3]}{text[i + 4]}{text[i + 5]}")))
-                {
-                    text = text.Remove(i + 3, 3);
-                }
-            }
-
-            return text;
+            return syllables;
         }
     }
 }
