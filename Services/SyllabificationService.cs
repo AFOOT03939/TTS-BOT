@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace TTS_BOT.Services
 {
@@ -159,5 +160,15 @@ namespace TTS_BOT.Services
 
             return syllables;
         }
+        
+        public string[] splitWord(string text)
+        {
+            string[] word;
+
+            word = Regex.Split(text, @"( )");
+
+            return word;
+        }
+        
     }
 }

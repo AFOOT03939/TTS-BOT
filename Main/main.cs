@@ -23,22 +23,37 @@ namespace TTS_BOT.NewFolder
             {
                 Console.WriteLine("Escribe un texto a continuación ");
                 var text = Console.ReadLine();
-                var syllables = _syllabificationService.syllabificate(text);
+
+                string[] splitText;
+                List<string> dirtySyllables = new List<string>();
+                List<string> syllables = new List<string>();
+
+                splitText = _syllabificationService.splitWord(text);
+
+                foreach(var split in splitText)
+                {
+                    dirtySyllables.Add(_syllabificationService.syllabificate(split));
+
+                }
+
+                foreach (var dirtySyllab in dirtySyllables)
+                {
+                    syllables.AddRange(dirtySyllab.Split("[s]", StringSplitOptions.RemoveEmptyEntries));
+                }
+
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Silaba\n" + syllables);
+
+                foreach (var sy in syllables)
+                {
+                    Console.WriteLine("Silaba\n" + sy);
+                }
+
                 Console.ForegroundColor = ConsoleColor.White;
 
-                string[] silabas = syllables.Split(
-                    new string[] { "[s]" },
-                    StringSplitOptions.RemoveEmptyEntries
-                );
-
-                /*
-                foreach (var silaba in silabas)
+                foreach (var sy in syllables)
                 {
-                    _audioPlayerService.audioPlay(silaba);
+                    _audioPlayerService.audioPlay(sy);
                 }
-                */
 
             } while (true);
         }
