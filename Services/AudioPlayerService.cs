@@ -1,4 +1,5 @@
 ﻿using NAudio.Wave;
+using NAudio.Wave.SampleProviders;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,20 +8,23 @@ namespace TTS_BOT.Services
 {
     public class AudioPlayerService
     {
-        public void audioPlay(string audio)
+        public void audioPlay(List<string> syllables)
         {
-            string audioFilePath = "E:\\Users\\victo\\Downloads\\" + audio + ".mp3";
+            var readers = new List<AudioFileReader>();
 
-            using (var audioFile = new AudioFileReader(audioFilePath))
-            using (var outputDevice = new WasapiPlayerBuilder().Build())
+            foreach (var syllable in syllables)
             {
-                outputDevice.Init(audioFile);
-                outputDevice.Play();
-                while (outputDevice.PlaybackState == PlaybackState.Playing)
-                {
-                    Thread.Sleep(1000);
-                }
+                var reader = new AudioFileReader("E:\\Users\\victo\\Downloads\\audios\\" + syllable + ".m4a");
+
+                readers.Add(reader);
+
             }
+
+            var playlist = new ConcatenatingSampleProvider(readers);
+
+            var outputDevice = new WasapiPlayerBuilder().Build();
+            outputDevice.Init(playlist);
+            outputDevice.Play();
         }
     }
 }

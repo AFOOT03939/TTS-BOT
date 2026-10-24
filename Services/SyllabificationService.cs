@@ -160,15 +160,13 @@ namespace TTS_BOT.Services
 
             return syllables;
         }
-        
+
         public string[] splitWord(string text)
         {
-            string[] word;
-
-            word = Regex.Split(text, @"( )");
-
-            return word;
+            return Regex.Split(text, @"( )")
+                        .Select(x => x == " " ? "¤" : x)
+                        .ToArray();
         }
-        
+
     }
 }

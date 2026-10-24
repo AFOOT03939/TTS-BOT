@@ -50,10 +50,7 @@ namespace TTS_BOT.NewFolder
 
                 Console.ForegroundColor = ConsoleColor.White;
 
-                foreach (var sy in syllables)
-                {
-                    _audioPlayerService.audioPlay(sy);
-                }
+                _audioPlayerService.audioPlay(syllables);
 
             } while (true);
         }
