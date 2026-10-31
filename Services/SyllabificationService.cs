@@ -7,6 +7,43 @@ namespace TTS_BOT.Services
 {
     public class SyllabificationService
     {
+        public List<string> textReciever(string text)
+        {
+            //var text = Console.ReadLine();
+
+            string[] splitText;
+            List<string> dirtySyllables = new List<string>();
+            List<string> syllables = new List<string>();
+
+            //separa las palabras
+            splitText = splitWord(text);
+
+            //hace la silabificación
+            foreach (var split in splitText)
+            {
+                dirtySyllables.Add(syllabificate(split));
+            }
+
+            //limpia las [s]
+            foreach (var dirtySyllab in dirtySyllables)
+            {
+                syllables.AddRange(dirtySyllab.Split("[s]", StringSplitOptions.RemoveEmptyEntries));
+            }
+
+            //Console.ForegroundColor = ConsoleColor.Red;
+
+            //foreach (var sy in syllables)
+            //{
+            //    Console.WriteLine("Silaba\n" + sy);
+            //}
+
+            //Console.ForegroundColor = ConsoleColor.White;
+
+            //_audioPlayerService.audioPlay(syllables);
+
+            return syllables;
+        }
+
         HashSet<char> vocals = new HashSet<char>
         {
             'a', 'e', 'i', 'o', 'u',

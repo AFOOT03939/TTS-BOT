@@ -9,8 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Discord.Net.WebSocket" Version="3.20.2" />
+    <PackageReference Include="DotNetEnv" Version="3.2.0" />
+    <PackageReference Include="DSharpPlus" Version="5.0.0-nightly-02613" />
+    <PackageReference Include="DSharpPlus.Commands" Version="5.0.0-nightly-02613" />
+    <PackageReference Include="DSharpPlus.SlashCommands" Version="5.0.0-nightly-02613" />
+    <PackageReference Include="DSharpPlus.Voice" Version="5.0.0-nightly-02613" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.14" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.13" />
     <PackageReference Include="NAudio" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Discord.Net\src\Discord.Net.WebSocket\Discord.Net.WebSocket.csproj" />
   </ItemGroup>
 
 </Project>

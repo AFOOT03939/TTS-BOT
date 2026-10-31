@@ -13,4 +13,7 @@
     <SourceRoot Include="E:\Users\victo\.nuget\packages\" />
     <SourceRoot Include="E:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)netescapades.enumgenerators.generators\1.0.0-beta21\buildTransitive\NetEscapades.EnumGenerators.Generators.props" Condition="Exists('$(NuGetPackageRoot)netescapades.enumgenerators.generators\1.0.0-beta21\buildTransitive\NetEscapades.EnumGenerators.Generators.props')" />
+  </ImportGroup>
 </Project>

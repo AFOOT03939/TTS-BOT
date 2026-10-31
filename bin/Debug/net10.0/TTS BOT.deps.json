@@ -8,11 +8,337 @@
     ".NETCoreApp,Version=v10.0": {
       "TTS BOT/1.0.0": {
         "dependencies": {
+          "DSharpPlus": "5.0.0-nightly-02613",
+          "DSharpPlus.Commands": "5.0.0-nightly-02613",
+          "DSharpPlus.SlashCommands": "5.0.0-nightly-02613",
+          "DSharpPlus.Voice": "5.0.0-nightly-02613",
+          "Discord.Net.WebSocket": "3.20.2-dev",
+          "DotNetEnv": "3.2.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.14",
           "Microsoft.Extensions.DependencyInjection": "10.0.13",
           "NAudio": "3.3.0"
         },
         "runtime": {
           "TTS BOT.dll": {}
+        }
+      },
+      "CommunityToolkit.HighPerformance/8.4.2": {
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.HighPerformance.dll": {
+            "assemblyVersion": "8.4.0.0",
+            "fileVersion": "8.4.2.1"
+          }
+        }
+      },
+      "DotNetEnv/3.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "10.0.11",
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.14",
+          "Superpower": "3.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DotNetEnv.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "DSharpPlus/5.0.0-nightly-02613": {
+        "dependencies": {
+          "CommunityToolkit.HighPerformance": "8.4.2",
+          "Microsoft.Extensions.Caching.Memory": "10.0.11",
+          "Microsoft.Extensions.Http": "10.0.11",
+          "Microsoft.Extensions.Logging": "10.0.11",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.11",
+          "NetEscapades.EnumGenerators": "1.0.0-beta21",
+          "Newtonsoft.Json": "13.0.4",
+          "Polly.Core": "8.7.0",
+          "System.Threading.RateLimiting": "10.0.11",
+          "Ulid": "1.4.1"
+        },
+        "runtime": {
+          "lib/net10.0/DSharpPlus.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "DSharpPlus.Commands/5.0.0-nightly-02613": {
+        "dependencies": {
+          "DSharpPlus": "5.0.0-nightly-02613",
+          "Microsoft.Extensions.Logging": "10.0.11",
+          "Raffinert.FuzzySharp": "3.0.6",
+          "Ulid": "1.4.1"
+        },
+        "runtime": {
+          "lib/net10.0/DSharpPlus.Commands.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "DSharpPlus.Natives.Koana/0.2.1.15": {
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libkoana.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-arm64/native/libkoana.so": {
+            "rid": "linux-musl-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libkoana.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libkoana.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libkoana.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libkoana.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/koana.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/koana.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "DSharpPlus.Natives.Opus/1.6.1.34": {
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libopus.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-arm64/native/libopus.so": {
+            "rid": "linux-musl-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libopus.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libopus.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libopus.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libopus.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/opus.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/opus.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "DSharpPlus.Natives.Sodium/1.0.22.25": {
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libsodium.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-arm64/native/libsodium.so": {
+            "rid": "linux-musl-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libsodium.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libsodium.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libsodium.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libsodium.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/libsodium.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.22.0"
+          },
+          "runtimes/win-x64/native/libsodium.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.22.0"
+          }
+        }
+      },
+      "DSharpPlus.Natives.Speex/1.2.1.8": {
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libspeexdsp.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-arm64/native/libspeexdsp.so": {
+            "rid": "linux-musl-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libspeexdsp.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libspeexdsp.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libspeexdsp.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libspeexdsp.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/speexdsp.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/speexdsp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "DSharpPlus.SlashCommands/5.0.0-nightly-02613": {
+        "dependencies": {
+          "DSharpPlus": "5.0.0-nightly-02613"
+        },
+        "runtime": {
+          "lib/net10.0/DSharpPlus.SlashCommands.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "DSharpPlus.Voice/5.0.0-nightly-02613": {
+        "dependencies": {
+          "DSharpPlus": "5.0.0-nightly-02613",
+          "DSharpPlus.Natives.Koana": "0.2.1.15",
+          "DSharpPlus.Natives.Opus": "1.6.1.34",
+          "DSharpPlus.Natives.Sodium": "1.0.22.25",
+          "DSharpPlus.Natives.Speex": "1.2.1.8",
+          "TerraFX.Interop.Mimalloc": "1.6.7.2"
+        },
+        "runtime": {
+          "lib/net10.0/DSharpPlus.Voice.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "10.0.14"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "10.0.11",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.11",
+          "Microsoft.Extensions.Options": "10.0.11",
+          "Microsoft.Extensions.Primitives": "10.0.14"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Caching.Memory.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.14",
+          "Microsoft.Extensions.Primitives": "10.0.14"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Configuration.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/10.0.14": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "10.0.14"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1426.52326"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "10.0.11",
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.14"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
         }
       },
       "Microsoft.Extensions.DependencyInjection/10.0.13": {
@@ -31,6 +357,106 @@
           "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.1326.50504"
+          }
+        }
+      },
+      "Microsoft.Extensions.Diagnostics/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "10.0.11",
+          "Microsoft.Extensions.Diagnostics.Abstractions": "10.0.11",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "10.0.11"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Diagnostics.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Diagnostics.Abstractions/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13",
+          "Microsoft.Extensions.Options": "10.0.11"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Http/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.14",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13",
+          "Microsoft.Extensions.Diagnostics": "10.0.11",
+          "Microsoft.Extensions.Logging": "10.0.11",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.11",
+          "Microsoft.Extensions.Options": "10.0.11"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Http.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "10.0.13",
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.11",
+          "Microsoft.Extensions.Options": "10.0.11"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Logging.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13",
+          "Microsoft.Extensions.Primitives": "10.0.14"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/10.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.14",
+          "Microsoft.Extensions.Configuration.Binder": "10.0.11",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.13",
+          "Microsoft.Extensions.Options": "10.0.11",
+          "Microsoft.Extensions.Primitives": "10.0.14"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/10.0.14": {
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1426.52326"
           }
         }
       },
@@ -93,11 +519,132 @@
           }
         }
       },
+      "NetEscapades.EnumGenerators/1.0.0-beta21": {
+        "dependencies": {
+          "NetEscapades.EnumGenerators.Generators": "1.0.0-beta21",
+          "NetEscapades.EnumGenerators.RuntimeDependencies": "1.0.0-beta21"
+        }
+      },
+      "NetEscapades.EnumGenerators.Generators/1.0.0-beta21": {
+        "runtime": {
+          "lib/netstandard2.0/NetEscapades.EnumGenerators.Attributes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "NetEscapades.EnumGenerators.RuntimeDependencies/1.0.0-beta21": {
+        "runtime": {
+          "lib/netstandard2.0/NetEscapades.EnumGenerators.RuntimeDependencies.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.4": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.4.30916"
+          }
+        }
+      },
+      "Polly.Core/8.7.0": {
+        "runtime": {
+          "lib/net8.0/Polly.Core.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.7.0.5801"
+          }
+        }
+      },
+      "Raffinert.FuzzySharp/3.0.6": {
+        "runtime": {
+          "lib/net9.0/Raffinert.FuzzySharp.dll": {
+            "assemblyVersion": "3.0.6.0",
+            "fileVersion": "3.0.6.0"
+          }
+        }
+      },
+      "Superpower/3.0.0": {
+        "runtime": {
+          "lib/net5.0/Superpower.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
       "System.Numerics.Tensors/9.0.0": {
         "runtime": {
           "lib/net9.0/System.Numerics.Tensors.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.24.52809"
+          }
+        }
+      },
+      "System.Threading.RateLimiting/10.0.11": {
+        "runtime": {
+          "lib/net10.0/System.Threading.RateLimiting.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1126.37416"
+          }
+        }
+      },
+      "TerraFX.Interop.Mimalloc/1.6.7.2": {
+        "runtime": {
+          "lib/net10.0/TerraFX.Interop.Mimalloc.dll": {
+            "assemblyVersion": "1.6.7.2",
+            "fileVersion": "1.6.7.2"
+          }
+        }
+      },
+      "Ulid/1.4.1": {
+        "runtime": {
+          "lib/net8.0/Ulid.dll": {
+            "assemblyVersion": "1.4.1.0",
+            "fileVersion": "1.4.1.0"
+          }
+        }
+      },
+      "Discord.Net.Core/3.20.2-dev": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime": {
+          "Discord.Net.Core.dll": {
+            "assemblyVersion": "3.20.2.0",
+            "fileVersion": "3.20.2.0"
+          }
+        }
+      },
+      "Discord.Net.Dave/3.20.2-dev": {
+        "runtime": {
+          "Discord.Net.Dave.dll": {
+            "assemblyVersion": "3.20.2.0",
+            "fileVersion": "3.20.2.0"
+          }
+        }
+      },
+      "Discord.Net.Rest/3.20.2-dev": {
+        "dependencies": {
+          "Discord.Net.Core": "3.20.2-dev"
+        },
+        "runtime": {
+          "Discord.Net.Rest.dll": {
+            "assemblyVersion": "3.20.2.0",
+            "fileVersion": "3.20.2.0"
+          }
+        }
+      },
+      "Discord.Net.WebSocket/3.20.2-dev": {
+        "dependencies": {
+          "Discord.Net.Core": "3.20.2-dev",
+          "Discord.Net.Dave": "3.20.2-dev",
+          "Discord.Net.Rest": "3.20.2-dev"
+        },
+        "runtime": {
+          "Discord.Net.WebSocket.dll": {
+            "assemblyVersion": "3.20.2.0",
+            "fileVersion": "3.20.2.0"
           }
         }
       }
@@ -108,6 +655,111 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CommunityToolkit.HighPerformance/8.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2hmtrrU18x6NL3mbuAqwy0KpnoEEJOuK6sH5RKQfD/jHijn2pqvqBUC7WGy9dgNBL9BDA7eOC0kirsNPMp2f4Q==",
+      "path": "communitytoolkit.highperformance/8.4.2",
+      "hashPath": "communitytoolkit.highperformance.8.4.2.nupkg.sha512"
+    },
+    "DotNetEnv/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2q+PD+aJcRW9QuRcIv4F8WbvEDxI6cwxzZJec2i45cBY4cAKCAoW4ZPkApJ7H82wr6Yfmxx/0kb1nLnRmZrGZA==",
+      "path": "dotnetenv/3.2.0",
+      "hashPath": "dotnetenv.3.2.0.nupkg.sha512"
+    },
+    "DSharpPlus/5.0.0-nightly-02613": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7x41e8mhTL4zBW5TU0RUGiPpKsJxupC96GDYjevHWFsALw1F8CyJGUq6PKnYXcDPg85ncJo7ccD9f7/2Rh6zYQ==",
+      "path": "dsharpplus/5.0.0-nightly-02613",
+      "hashPath": "dsharpplus.5.0.0-nightly-02613.nupkg.sha512"
+    },
+    "DSharpPlus.Commands/5.0.0-nightly-02613": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZtrtXgRh4w0R3uWWZV/8BcPF4N10Ry+6dpL7QXoEUjJDn8/mZAyyPpCc4ZIKSWq7KRNki4TUc4L3M++IJ9pNxQ==",
+      "path": "dsharpplus.commands/5.0.0-nightly-02613",
+      "hashPath": "dsharpplus.commands.5.0.0-nightly-02613.nupkg.sha512"
+    },
+    "DSharpPlus.Natives.Koana/0.2.1.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+TPj7YjRxhIUl7EVwznBpJ2FNT9afnh4BYT/g+YcvoehY6xMNBLzquayN4ivVbNnrTvbTiyZJ6zA7/RlKvWZ+Q==",
+      "path": "dsharpplus.natives.koana/0.2.1.15",
+      "hashPath": "dsharpplus.natives.koana.0.2.1.15.nupkg.sha512"
+    },
+    "DSharpPlus.Natives.Opus/1.6.1.34": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vS8YwbaOHGs4dOaSAf2UyNeIWFfavY1IXSRoWeXbMAEcwNJyy+Fng4mn7BXh4W6o++i8ao1FV/jXURiST91/Rg==",
+      "path": "dsharpplus.natives.opus/1.6.1.34",
+      "hashPath": "dsharpplus.natives.opus.1.6.1.34.nupkg.sha512"
+    },
+    "DSharpPlus.Natives.Sodium/1.0.22.25": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hcLOssu9qOj62v4NgSdjgJo6yBk7S4w5AmJse42ustIZXWrZlLd7kcsOYbbM3i+IaebxZLgeFRlfOwxqxT8AMQ==",
+      "path": "dsharpplus.natives.sodium/1.0.22.25",
+      "hashPath": "dsharpplus.natives.sodium.1.0.22.25.nupkg.sha512"
+    },
+    "DSharpPlus.Natives.Speex/1.2.1.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+5Cq9itlJEBbcg4Vn9djEVSn/ZDC5qbgqYt9uSp37J66WvrDBVvnpiW7HdPP4XQ8blpaZ1vA2EcnA0WaoCbXZg==",
+      "path": "dsharpplus.natives.speex/1.2.1.8",
+      "hashPath": "dsharpplus.natives.speex.1.2.1.8.nupkg.sha512"
+    },
+    "DSharpPlus.SlashCommands/5.0.0-nightly-02613": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-49gZORYggnbDJkBpYyTMNvvQsQ27eoIa4Wd5/4h41ieckQMuka+8WdkYXMrpuIGOLSZZb/P9NomQjdXtOneB2w==",
+      "path": "dsharpplus.slashcommands/5.0.0-nightly-02613",
+      "hashPath": "dsharpplus.slashcommands.5.0.0-nightly-02613.nupkg.sha512"
+    },
+    "DSharpPlus.Voice/5.0.0-nightly-02613": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V2ngpPNyXqns4ZyVBCvFxX3fj9SOFUGMxLDw05/d1dV6P0BAX6/U0l2qwSI+Sa7DFDMbeYZ6COVZI+wVA0vx3A==",
+      "path": "dsharpplus.voice/5.0.0-nightly-02613",
+      "hashPath": "dsharpplus.voice.5.0.0-nightly-02613.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Abstractions/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vUl798SmruTqqlt/xH2gDk3tJlhk6k3HdOXAHirlRfbNKDym4g/kRpUL9S4sl6F6FsOTOMW+ZsDapqlZMOOiEw==",
+      "path": "microsoft.extensions.caching.abstractions/10.0.11",
+      "hashPath": "microsoft.extensions.caching.abstractions.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Memory/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-el1g0mBEbDBGY2bT9mcSfrTWO8QlPdq2nOCnvQugioOFwHV+bVBMeiakoI0dNOdj8d6Hi9K6HY2xzRUWJiDR3w==",
+      "path": "microsoft.extensions.caching.memory/10.0.11",
+      "hashPath": "microsoft.extensions.caching.memory.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wlhRqZW8LcJPa+vk2oLAc/REXDItHtkFQdf/QcXYGZbZOO13izcsKY1pCvuFQYwUiZD+hwSZwsKASjqT+BNaVg==",
+      "path": "microsoft.extensions.configuration/10.0.11",
+      "hashPath": "microsoft.extensions.configuration.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/10.0.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4YdfvaoWn3tB1xQQHGrhRTFWJ8fGOqxThxduynSZy9ZFTiSaUi3vX4EK/kj8h2HQMwTlks9MWV1fv2WRBv5/1w==",
+      "path": "microsoft.extensions.configuration.abstractions/10.0.14",
+      "hashPath": "microsoft.extensions.configuration.abstractions.10.0.14.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Binder/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rFn8RuszZn3qquPVkDytMUlPc2+rXl9MCoygwc1XmAgC5vg5/oXJ8hkOosOrLoBLsqdTy4lFwP6iQdPS9uSYOA==",
+      "path": "microsoft.extensions.configuration.binder/10.0.11",
+      "hashPath": "microsoft.extensions.configuration.binder.10.0.11.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/10.0.13": {
       "type": "package",
@@ -122,6 +774,62 @@
       "sha512": "sha512-G2GrGWNAPZBsii2F6AU8n+JT2tC1/I0Ml/e9ZyNCgPjf3hZqronP7o0X91aAynCmVeae8KkSIUNXXeXCNRmdVQ==",
       "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.13",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.10.0.13.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Diagnostics/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HT70uGPxMLqqnOzKMcnQtDmeV4r0KHr4qVCLhP7SXil9jMEm8sQXwcybxVVFGXZJ1V44xV0mLqQ54aZbcR2OiQ==",
+      "path": "microsoft.extensions.diagnostics/10.0.11",
+      "hashPath": "microsoft.extensions.diagnostics.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Diagnostics.Abstractions/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-se7Kx8QpJEt+nf26L4qIVAofGTDr1wbexxsh/Fm3Xc04xUkqUXK06KUS7FLwSQYSjqb7q9n+T7MEcXYBhI1Y5g==",
+      "path": "microsoft.extensions.diagnostics.abstractions/10.0.11",
+      "hashPath": "microsoft.extensions.diagnostics.abstractions.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Http/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ujx8RvcKzkxPFBguwgiygbwWVHVK0P7HFlNJ6I0JBRb28tzwe42jixBoA+dGmqG9IHepPVcm04vv2IDnU93ekA==",
+      "path": "microsoft.extensions.http/10.0.11",
+      "hashPath": "microsoft.extensions.http.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nUOJwgFkSiLHiVGFpU22pIJtuWYewuSYQ3JVuP/gdK8ASMT807Px+TYQiRWs6uSsOmoyFTaVCwKXTasczV6BpA==",
+      "path": "microsoft.extensions.logging/10.0.11",
+      "hashPath": "microsoft.extensions.logging.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ljd0Uxoq5XpScD2Bg0nM/r3mwx7Ao5Uq24eo2ARxbGvqJ7Zht6rt2cJtwVRH4Cv+1ZVMdXz6TB43KbpmsxRrvQ==",
+      "path": "microsoft.extensions.logging.abstractions/10.0.11",
+      "hashPath": "microsoft.extensions.logging.abstractions.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eY1GAKcTfD2maP27J84X9IovT3yjHJ2dVDzPmDg6/XqYvt3jMzJhtfQCLjG9pVsZGAd+8DQ2QrjaDcs2+VQLGw==",
+      "path": "microsoft.extensions.options/10.0.11",
+      "hashPath": "microsoft.extensions.options.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-syEhXQ/sEaSBFaqzlp9gDGHX/nk6gkQkh1sIUpBO1mlBj3Phu1rmb4ML1uCiyPW9N6Kxfxv3y5FGObC+bV01Qw==",
+      "path": "microsoft.extensions.options.configurationextensions/10.0.11",
+      "hashPath": "microsoft.extensions.options.configurationextensions.10.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/10.0.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1bbZqqCJTPba3inTADExbp/9PsGVyvGOX3zr6tFr7ySCgVkX9Lpw7BV0TizktNItd3SsbUu1sQfSAYm1GZMoNw==",
+      "path": "microsoft.extensions.primitives/10.0.14",
+      "hashPath": "microsoft.extensions.primitives.10.0.14.nupkg.sha512"
     },
     "NAudio/3.3.0": {
       "type": "package",
@@ -158,12 +866,102 @@
       "path": "naudio.winmm/3.3.0",
       "hashPath": "naudio.winmm.3.3.0.nupkg.sha512"
     },
+    "NetEscapades.EnumGenerators/1.0.0-beta21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GVhHFXkDBqzD96oc6sJGh9LQh+f50KvbwGxy+k5JuzIS8BHuTANo34tlJrv9T7jmofbucnE4pPhvPMu8dS0QUg==",
+      "path": "netescapades.enumgenerators/1.0.0-beta21",
+      "hashPath": "netescapades.enumgenerators.1.0.0-beta21.nupkg.sha512"
+    },
+    "NetEscapades.EnumGenerators.Generators/1.0.0-beta21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hztPmuEjHzLqDM4gvXfRuaBAQt3EpRaduQoLW8jDxIk1lXuJwTGl+L5NTERx5WKyV3vDzQK9mDPwzA+E/R2xHA==",
+      "path": "netescapades.enumgenerators.generators/1.0.0-beta21",
+      "hashPath": "netescapades.enumgenerators.generators.1.0.0-beta21.nupkg.sha512"
+    },
+    "NetEscapades.EnumGenerators.RuntimeDependencies/1.0.0-beta21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BYUQMIv1MFaFurVlxfyVFTTwwgMsfmGJLn2wiP77ZmegZ9WJbcRD+n62v4q2FOrBMPuP0W1bESASM1Wye/8sCw==",
+      "path": "netescapades.enumgenerators.runtimedependencies/1.0.0-beta21",
+      "hashPath": "netescapades.enumgenerators.runtimedependencies.1.0.0-beta21.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A==",
+      "path": "newtonsoft.json/13.0.4",
+      "hashPath": "newtonsoft.json.13.0.4.nupkg.sha512"
+    },
+    "Polly.Core/8.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BS2t+nsBer16PIebCEPNBK5fgMisADQyRCd7K+BgkMWpFmSaiYE+rVVNpFhGRqUkJmNSLmw0uCNzHHWfgml28Q==",
+      "path": "polly.core/8.7.0",
+      "hashPath": "polly.core.8.7.0.nupkg.sha512"
+    },
+    "Raffinert.FuzzySharp/3.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bbweA3rWMFVA4rKmH7DbQAvqVl1IWcrQpIDKmNl6IDS5o/jnmh7kda2q9pyY22ssBaK/WLaU3UPazlqyAi0Zig==",
+      "path": "raffinert.fuzzysharp/3.0.6",
+      "hashPath": "raffinert.fuzzysharp.3.0.6.nupkg.sha512"
+    },
+    "Superpower/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bjKbAYWePooCAvPxQq+3KnmcLfRggMyRoXmtBMlmCG71bdwBHrO6rmRJ2DRIodg5aztNcxeZXBUVWT+H+MZUhw==",
+      "path": "superpower/3.0.0",
+      "hashPath": "superpower.3.0.0.nupkg.sha512"
+    },
     "System.Numerics.Tensors/9.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-hyJB4UlpAi19Xr9AXzu2NuagKC4lPfHObNMEAA0HmqFz2rX7wKgzeYzO/jM/eBHDhnUGFFEjk5cOoJaxqg5J4A==",
       "path": "system.numerics.tensors/9.0.0",
       "hashPath": "system.numerics.tensors.9.0.0.nupkg.sha512"
+    },
+    "System.Threading.RateLimiting/10.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7+n9cNFpC7VIJzBwSyxs6DHNGLP330dJVeeOSdIJt4TiwwazyEvvRuhWLORT41mRxQVGKhiFIZ+In4JKFWS9Ig==",
+      "path": "system.threading.ratelimiting/10.0.11",
+      "hashPath": "system.threading.ratelimiting.10.0.11.nupkg.sha512"
+    },
+    "TerraFX.Interop.Mimalloc/1.6.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UJHTPtNy8P2NhL5WZzNWl2HStjIMed+JbESDSUE1envvO6JLLbNJh4HOSlGKoV4VbvrF/UOQm91BlnJpJuxTNw==",
+      "path": "terrafx.interop.mimalloc/1.6.7.2",
+      "hashPath": "terrafx.interop.mimalloc.1.6.7.2.nupkg.sha512"
+    },
+    "Ulid/1.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V6crLJ8a29raWeNwxYGfH9RTKA3H0nR0D9LAGzN3KtEsbiiaWkUjDor6OT5Oz7pxCK+NaY2hu2FLoYEOa8oCkA==",
+      "path": "ulid/1.4.1",
+      "hashPath": "ulid.1.4.1.nupkg.sha512"
+    },
+    "Discord.Net.Core/3.20.2-dev": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Discord.Net.Dave/3.20.2-dev": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Discord.Net.Rest/3.20.2-dev": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Discord.Net.WebSocket/3.20.2-dev": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -1,4 +1,8 @@
 is_global = true
+build_property.EnumGenerator_EnumMetadataSource = EnumMemberAttribute
+build_property.EnumGenerator_ForceExtensionMembers = false
+build_property.EnumGenerator_ForceInternal = false
+build_property.EnumGenerator_EnableUsageAnalyzers = 
 build_property.TargetFramework = net10.0
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0

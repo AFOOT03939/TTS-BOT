@@ -1,4 +1,8 @@
-﻿using NAudio.Wave;
+﻿//Este servicio era para pruebas locales dentro de windows, ahora mismo ya no se utilizará debido a la implementación del bot
+//sin embargo, lo voy a mantener por si las dudas.
+
+/*
+using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 using System;
 using System.Collections.Generic;
@@ -33,3 +37,4 @@ namespace TTS_BOT.Services
         }
     }
 }
+*/
